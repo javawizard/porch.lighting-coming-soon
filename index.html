@@ -1,5 +1,73 @@
 <html>
-  <body style="display: flex; align-items: center; justify-content: center">
-    <div style="font: min(10vw, 18vh, 8em) sans-serif; color: #999">Coming soon</div>
+  <head>
+    <style>
+      body {
+        position: relative;
+        margin: 0;
+      }
+      .color-container {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        display: grid;
+      }
+      @media (orientation: portrait) {
+        .color-container {
+          grid-template-columns: repeat(3, 1fr);
+        }
+      }
+      @media (orientation: landscape) {
+        .color-container {
+          grid-template-columns: repeat(4, 1fr);
+        }
+      }
+      .mask {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        opacity: 0.9;
+        background-color: #f3f3f3;
+      }
+      .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .coming-soon {
+        font: min(10vw, 18vh, 8em) sans-serif;
+        color: #787d7f;
+        /*text-shadow: 2px 2px #668;*/
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <div style="font: min(10vw, 18vh, 8em) sans-serif; color: #999">Coming soon</div> -->
+    <div class="color-container">
+      <div style="background-color: #f1c40f"></div>
+      <div style="background-color: #e67e22"></div>
+      <div style="background-color: #e74c3c"></div>
+      <div style="background-color: #1abc9c"></div>
+      <div style="background-color: #2ecc71"></div>
+      <div style="background-color: #3498db"></div>
+      <div style="background-color: #b65979"></div>
+      <div style="background-color: #8179d2"></div>
+      <div style="background-color: #9abf40"></div>
+      <div style="background-color: #9b59b6"></div>
+      <div style="background-color: #34495e"></div>
+      <div style="background-color: #ecf0f1"></div>
+    </div>
+    <div class="mask"></div>
+    <div class="overlay">
+      <div class="coming-soon">Coming soon</div>
+    </div>
   </body>
 </html>
